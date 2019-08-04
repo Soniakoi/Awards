@@ -51,7 +51,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ')63_ai@@s6))l!eeg5&!g5hs*j(yi2k_4b#bif)df-ju$uorht'
+SECRET_KEY ='200599'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -167,4 +167,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Configure Django App for Heroku.
-django_heroku.settings(l
+django_heroku.settings(locals())
