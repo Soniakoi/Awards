@@ -8,6 +8,7 @@ class Project(models.Model):
   user=models.ForeignKey(User,on_delete=models.CASCADE)
   description=models.TextField()
   link=models.CharField(max_length=60,default='site.com')
+  project_image = models.ImageField(upload_to = 'projects/')
 
   @classmethod
   def search_by_title(cls,search_term):
