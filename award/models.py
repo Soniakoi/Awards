@@ -20,3 +20,21 @@ class Project(models.Model):
   class Meta:
     ordering=['name']
 
+
+class Profile(models.Model):
+  prof_pic = models.ImageField(upload_to='profile/',default='default-avatar.jpg')
+  bio=models.TextField()
+  user=models.ForeignKey(User,on_delete=models.CASCADE)
+  contact=models.IntegerField()
+  name=models.CharField(max_length=60)
+
+  def __str__(self):
+    return self.contact
+
+  def profile_save(self):
+    self.save()
+
+  def profile_delete(self):
+    self.delete()
+
+
