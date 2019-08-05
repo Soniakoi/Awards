@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Project(models.Model):
   name=models.CharField(max_length=40)
-  image=models.ImageField(upload_to='projects/',default='tech.jpeg')
+  image=models.ImageField(upload_to='projects/',default='')
   # user=models.ForeignKey(User,on_delete=models.CASCADE)
   description=models.TextField()
   link=models.CharField(max_length=60,default='site.com')
@@ -27,7 +27,7 @@ class Project(models.Model):
 
 
 class Profile(models.Model):
-  prof_pic = models.ImageField(upload_to='profile/',default='default-avatar.jpg')
+  prof_pic = models.ImageField(upload_to='profile/',default='')
   bio=models.TextField()
   user=models.ForeignKey(User,on_delete=models.CASCADE)
   contact=models.IntegerField()
