@@ -4,7 +4,7 @@ from django.db import models
 class Project(models.Model):
   name=models.CharField(max_length=40)
   image=models.ImageField(upload_to='projects/',default='tech.jpeg')
-  user=models.ForeignKey(User,on_delete=models.CASCADE)
+  # user=models.ForeignKey(User,on_delete=models.CASCADE)
   description=models.TextField()
   link=models.CharField(max_length=60,default='site.com')
 
