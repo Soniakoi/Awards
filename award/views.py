@@ -67,7 +67,7 @@ def project_add(request):
 
   else:
     form=NewProjectForm()
-    return render(request,'project-add.html',{'form':form})
+    return render(request,'project.html',{'form':form})
 
 
 
