@@ -8,6 +8,11 @@ class Project(models.Model):
   description=models.TextField()
   link=models.CharField(max_length=60,default='site.com')
 
+  @classmethod
+  def search_by_title(cls,search_term):
+    award = cls.objects.filter(title__icontains=search_term)
+    return news
+
   def __str__(self):
     return self.name
 
