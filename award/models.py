@@ -44,8 +44,6 @@ class Profile(models.Model):
   def profile_delete(self):
     self.delete()
 
-class NewsLetterRecipients(models.Model):
-    name = models.CharField(max_length = 30)
-    email = models.EmailField()    
+  
 
 
